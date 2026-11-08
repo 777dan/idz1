@@ -1,0 +1,53 @@
+body {
+    background-color: #b2dfa1;
+    color: #0a3d27;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+canvas {
+    background-color: #120f0f;
+}
+
+div:has(#gameCanvas) {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin: auto;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+#menu, #pause, #gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #153909;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#gameOver>h2, #gameOver>p, #pause>h2 {
+    color: white !important;
+}

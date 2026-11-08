@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перегони</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Перегони</h1>
+    <div>
+        <canvas width="300" height="450"></canvas>
+        <div id="menu">
+            <button class="btn" onclick="start()">Почати гру</button>
+        </div>
+        <div id="pause" class="hidden">
+            <h2>Пауза</h2>
+            <button class="btn" onclick="togglePause()">Продовжити</button>
+        </div>
+        <div id="gameOver" class="hidden">
+            <h2>Гра закінчена!</h2>
+            <p id="finalScore">Пройдено: 0 км</p>
+            <button class="btn" onclick="start()">Заново</button>
+        </div>
+    </div>
+    <h2 id="scoreText">Дистанція: 0 км</h2>
+
+    <script src="script.js"></script>
+</body>
+</html>

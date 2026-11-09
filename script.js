@@ -36,13 +36,9 @@ const carWidth = 40;
 
 const player = {
     x: lanes[playerLane],
-    y: 330,
+    y: 340,
     width: 40,
     height: 70
-};
-
-imgPlayer.onload = () => {
-    player.height = player.width * (imgPlayer.naturalHeight / imgPlayer.naturalWidth);
 };
 
 function togglePause() {
@@ -84,7 +80,6 @@ function spawnNpc() {
     if (!gameStarted || isGameOver || isPaused) return;
 
     let pos_x = lanes[Math.floor(Math.random() * lanes.length)];
-
     let isLaneBlocked = false;
     for (let i = 0; i < npcArr.length; i++) {
         if (npcArr[i].x === pos_x && npcArr[i].y < 50) {
@@ -106,7 +101,6 @@ function spawnNpc() {
         img: randomImg
     };
 
-    npcObj.height = npcObj.width * (randomImg.naturalHeight / randomImg.naturalWidth);
     npcArr.push(npcObj);
 }
 
@@ -149,7 +143,7 @@ function update() {
         }
     }
 
-    npcArr = npcArr.filter(npc => npc.y < canvas.height + 150);
+    npcArr = npcArr.filter(npc => npc.y < canvas.height);
     score += 0.05;
     scoreText.innerText = Math.floor(score) + " км";
 

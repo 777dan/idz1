@@ -151,7 +151,7 @@ function update() {
 
     npcArr = npcArr.filter(npc => npc.y < canvas.height + 150);
     score += 0.05;
-    scoreText.innerText = "Дистанція: " + Math.floor(score) + " км";
+    scoreText.innerText = Math.floor(score) + " км";
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(imgRoad, 0, roadY, canvas.width, canvas.height);
